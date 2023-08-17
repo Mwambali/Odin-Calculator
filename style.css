@@ -1,18 +1,18 @@
 :root {
-    --background: #f6f6f6;
+    --background: lightblue;
     --font: #222;
     --border: #333;
     --screen: #eee;
-    --calculator: #aaa;
+    --calculator: #281d1d;
     --btn: #eee;
     --btn-hover: #ddd;
     --btn-active: #ccc;
-    --btn-red: #faa;
-    --btn-red-hover: #e99;
+    --btn-red: rgb(230, 16, 16);
+    --btn-red-hover: rgb(154, 92, 92);
     --btn-red-active: #d88;
-    --btn-blue: #aaf;
-    --btn-blue-hover: #99e;
-    --btn-blue-active: #88d;
+    --btn-blue: rgb(38, 38, 158);
+    --btn-blue-hover: rgb(103, 103, 180);
+    --btn-blue-active: rgb(53, 53, 161);
 }
 
 *,
@@ -21,12 +21,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-html {
-    /* footer support */
-    position: relative;
-    min-height: 100%;
 }
 
 body {
@@ -47,9 +41,6 @@ button {
     outline: none;
 }
 
-
-/* MAIN */
-
 .main {
     display: flex;
     align-items: center;
@@ -61,16 +52,17 @@ button {
 }
 
 .calculator {
-    width: 400px;
-    border: 2px var(--border) solid;
+    width: 320px;
+    border: none;
     border-radius: 15px;
     padding: 20px;
     background-color: var(--calculator);
+    box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2)
 }
 
 .screen {
     padding: 10px 20px;
-    border: 2px var(--border) solid;
+    border: none;
     border-radius: 5px;
     margin-bottom: 20px;
     background-color: var(--screen);
@@ -81,7 +73,7 @@ button {
 
 .screen-last {
     min-height: 32px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .screen-current {
@@ -92,7 +84,7 @@ button {
 .buttons-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 8px;
 }
 
 .span-2 {
@@ -100,8 +92,8 @@ button {
 }
 
 .btn {
-    padding: 20px;
-    border: 2px var(--border) solid;
+    padding: 16px;
+    border: none;
     border-radius: 100%;
     background-color: var(--btn);
     font-size: 20px;
@@ -121,6 +113,7 @@ button {
 
 .btn-red:hover {
     background-color: var(--btn-red-hover);
+    color: #eee;
 }
 
 .btn-red:active {
@@ -138,7 +131,6 @@ button {
 .btn-blue:active {
     background-color: var(--btn-blue-active);
 }
-
 
 /* Disables input spinners in calc screen */
 
